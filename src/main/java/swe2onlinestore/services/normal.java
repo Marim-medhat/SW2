@@ -6,6 +6,10 @@ public class normal extends User {
 		super(userName, mail, password);
 		this.type = "normal";
 	}
+	public static void main(String args[])  //static method  
+	{  
+	System.out.println("Static method");  
+	}  
 
 	
 }
