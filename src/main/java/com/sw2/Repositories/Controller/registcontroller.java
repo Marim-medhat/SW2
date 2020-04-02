@@ -1,0 +1,14 @@
+package com.sw2.Repositories.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+@Controller
+public class registcontroller {
+	
+@RequestMapping("/registuser")
+
+public String  registuser() {
+	return"registUser";
+}
+
+}

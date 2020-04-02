@@ -23,6 +23,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Alexender/Desktop/mssql-jdbc-8.2.2.jre8.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/X-COMPUTER/Desktop/mssql-jdbc-8.2.2.jre8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
