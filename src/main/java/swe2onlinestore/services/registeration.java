@@ -1,19 +1,32 @@
 package swe2onlinestore.services;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+	import java.util.List;
 
-public class registeration implements regist {
+	import org.apache.catalina.User;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.stereotype.Service;
+	import org.springframework.transaction.annotation.Transactional;
 
-	public registeration() {
-	}
+	import com.sw2.Repositories.reprosatory;
+	 
+	@Service
+	@Transactional
+	public class registeration   {
 
-	public void register(User user) throws Exception{ 
-		if(user==null) {
-			 throw new Exception("error in registeration class");
-		}
-			
+		 @Autowired
+		    private reprosatory repo;
 		
-	}
-
-}
+		 public List<User> listAll() {
+		        return repo.findAll();
+		    }
+		 
+		 public void registUser(User user) {
+		        repo.save(user);
+		    }
+		 
+		 
+		 
+		 
+		 
+		 
+			}
