@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import swe2onlinestore.services.ListService;
 import swe2onlinestore.services.registerationService;
 @Controller
-public class registcontroller {
+public class listController {
 	 @Autowired
-	    private registerationService service;
-	 
+	    private ListService service;
 	
+	
+	@RequestMapping("/list")
+	public String viewHomePage(Model model) {
+	    List<User> listUser = service.listAll();
+	    model.addAttribute("listUser", listUser);
 	     
-	     @RequestMapping(value = "/regist", method = RequestMethod.POST)
-	     
-	     public String registuser(@ModelAttribute("user") User user) {
-	         service.registUser(user);
-	          
-	         return "redirect:/";
-	     }
-	 }
+	    return "listusers";
+	}
+}

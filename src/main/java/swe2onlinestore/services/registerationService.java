@@ -11,14 +11,12 @@ package swe2onlinestore.services;
 	 
 	@Service
 	@Transactional
-	public class registeration   {
+	public class registerationService   {
 
 		 @Autowired
 		    private reprosatory repo;
 		
-		 public List<User> listAll() {
-		        return repo.findAll();
-		    }
+		
 		 
 		 public void registUser(User user) {
 		        repo.save(user);
