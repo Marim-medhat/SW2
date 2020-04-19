@@ -31,7 +31,7 @@ public class registcontroller {
 			 service.registUser(user);
 			 model.addAttribute("user",  new User());
 			 
-			return "registUserhtml.html";
+			return "home";
 			 
 			 
 		 }

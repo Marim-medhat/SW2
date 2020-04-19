@@ -6,6 +6,7 @@ package com.sw2.Repositories.Controller;
 	import javax.persistence.GenerationType;
 	import javax.persistence.Id;
 
+
 @Entity
 public class User {
 	
@@ -15,7 +16,7 @@ public class User {
 		private String email;
 		private String type;
 		private String password;
-		
+		private boolean enabled ;
 
 		public User() {
 			id=0;
@@ -23,16 +24,18 @@ public class User {
 			email = "";
 			type = "";
 			password = "";
+			enabled=true;
 		}
 		
 
-		public User(Integer id, String username, String email, String type, String password) {
+		public User(Integer id, String username, String email, String type, String password,boolean enabled) {
 			super();
 			this.id = id;
 			this.username = username;
 			this.email = email;
 			this.type = type;
 			this.password = password;
+			this. enabled =enabled;
 		}
 
 		@Id
@@ -78,12 +81,27 @@ public class User {
 
 
 		public String getPassword() {
+			
 			return password;
 		}
 
 
 		public void setPassword(String password) {
+
 			this.password = password;
+		}
+
+
+		public boolean isEnabled() {
+			return enabled;
+		}
+
+
+		public void setEnabled(boolean enabled) {
+			if (type =="normal")
+		
+				this.enabled = true;
+			
 		}
 
 

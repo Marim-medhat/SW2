@@ -26,6 +26,11 @@ public class listController {
 		  model.addAttribute("listUser", listUser);
          return "listusers";
      }
+	 @RequestMapping( "/")
+     public String ShowregistuserForm() {
+		   
+         return "home";
+     }
 	
 	
 	
