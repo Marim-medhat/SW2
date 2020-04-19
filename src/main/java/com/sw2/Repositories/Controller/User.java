@@ -14,7 +14,7 @@ public class User {
 		
 		private String username;
 		private String email;
-		private String type;
+		private String role;
 		private String password;
 		private boolean enabled ;
 
@@ -22,7 +22,7 @@ public class User {
 			id=0;
 			username = "";
 			email = "";
-			type = "";
+			role = "";
 			password = "";
 			enabled=true;
 		}
@@ -33,7 +33,7 @@ public class User {
 			this.id = id;
 			this.username = username;
 			this.email = email;
-			this.type = type;
+			this.role = type;
 			this.password = password;
 			this. enabled =enabled;
 		}
@@ -71,12 +71,12 @@ public class User {
 
 
 		public String getType() {
-			return type;
+			return role;
 		}
 
 
 		public void setType(String type) {
-			this.type = type;
+			this.role = type;
 		}
 
 
@@ -98,7 +98,7 @@ public class User {
 
 
 		public void setEnabled(boolean enabled) {
-			if (type =="normal")
+			if (role =="normal")
 		
 				this.enabled = true;
 			

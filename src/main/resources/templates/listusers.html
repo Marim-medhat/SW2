@@ -16,7 +16,7 @@
                 <th>id </th>
                  <th>username</th>
                 <th>email</th>
-                <th>type</th>
+                <th>role</th>
                
                
             </tr>
@@ -26,12 +26,15 @@
              <td th:text="${User.id}">id</td>
                 <td th:text="${User.username}">username</td>
                 <td th:text="${User.email}">email</td>
-                <td th:text="${User.type}">type</td>
+                <td th:text="${User.role}">role</td>
                
             
             </tr>
         </tbody>
     </table>
-</div>   
+</div> 
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout" />
+</form>  
 </body>
 </html>
