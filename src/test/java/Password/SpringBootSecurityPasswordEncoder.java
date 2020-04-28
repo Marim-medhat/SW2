@@ -7,7 +7,7 @@ public class SpringBootSecurityPasswordEncoder {
 		// TODO Auto-generated method stub
 
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		String password = "sssss";
+		String password = "123456";
 		String encodedPassword = passwordEncoder.encode(password);
 		System.out.println();
 		System.out.println("Password is         : " + password);
